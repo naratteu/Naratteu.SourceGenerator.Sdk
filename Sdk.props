@@ -1,0 +1,15 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules> <!--RS1036-->
+    <IncludeBuildOutput>false</IncludeBuildOutput> <!-- lib경로에 dll을 넣지 않습니다. targets에서 대신 분석기경로에 넣는 설정이 이어집니다. -->
+    <PackageType>Analyzer</PackageType>
+    <LangVersion>14</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="For FBA">
+    <OutputType>Library</OutputType>
+    <PackAsTool>false</PackAsTool>
+    <PublishAot>false</PublishAot>
+  </PropertyGroup>
+</Project>
