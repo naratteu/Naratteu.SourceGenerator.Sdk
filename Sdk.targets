@@ -2,6 +2,7 @@
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(OutputPath)$(AssemblyName).dll" />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="@(Reference)" /> <!-- #:include 등 dll 참조추가 지원 -->
     <PackageReference PrivateAssets="all" Version="5.3.0" Include="Microsoft.CodeAnalysis.CSharp" />
     <PackageReference PrivateAssets="all" Version="1.16.0" Include="PolySharp">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
