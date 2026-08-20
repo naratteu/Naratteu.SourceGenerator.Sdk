@@ -5,6 +5,7 @@
     <IsRoslynComponent>true</IsRoslynComponent> <!-- 디버깅 지원 https://forum.dotnetdev.kr/t/net-6-slog/2210/18 -->
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules> <!--RS1036-->
     <BuildOutputTargetFolder>analyzers/dotnet/cs</BuildOutputTargetFolder>
+    <EnablePackageValidation>true</EnablePackageValidation> <!-- https://learn.microsoft.com/dotnet/fundamentals/apicompat/package-validation/overview -->
     <PackageType>Analyzer</PackageType>
     <LangVersion>14</LangVersion>
   </PropertyGroup>
