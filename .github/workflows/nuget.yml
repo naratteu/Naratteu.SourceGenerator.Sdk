@@ -7,5 +7,5 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - run: |
-        dotnet pack -c Release -o ./pack -p:Version=${GITHUB_REF##refs/tags/v}
+        dotnet pack -o ./pack -p:Version=${GITHUB_REF##refs/tags/v}
         dotnet nuget push ./pack/*.nupkg --api-key "${{secrets.NU_TOKEN}}" --source "https://api.nuget.org/v3/index.json"

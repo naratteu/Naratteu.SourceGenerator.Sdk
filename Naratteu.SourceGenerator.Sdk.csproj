@@ -5,7 +5,6 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
   <ItemGroup>
-    <None Pack="true" PackagePath="Sdk" Include="Sdk.props" />
-    <None Pack="true" PackagePath="Sdk" Include="Sdk.targets" />
+    <None Pack="true" PackagePath="Sdk" Include="Sdk.props;Sdk.targets" />
   </ItemGroup>
 </Project>
